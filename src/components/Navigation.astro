@@ -2,21 +2,35 @@
 
 ---
 
-<ul class="nav-links">
-  <li><a href="/">首页</a></li>
-  <li><a href="/about/" data-astro-reload>关于</a></li>
-  <li><a href="/blog/">博客</a></li>
-  <li><a href="/tags/">标签</a></li>
-</ul>
+<div class="nav-warp">
+  <ul class="nav-links">
+    <li><a href="/">首页</a></li>
+    <li><a href="/about/" data-astro-reload>关于</a></li>
+    <li><a href="/blog/">博客</a></li>
+    <li><a href="/tags/">标签</a></li>
+  </ul>
+</div>
 
 <style>
+  .nav-warp {
+    border: 1px solid red;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    flex-shrink: 1;
+    flex-grow 2;
+    width: 100%;
+    line-height: 32px;
+  }
   .nav-links {
     color: #1d1d1f;
     text-align: center;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     height: 100%;
+    gap: 10px;
   }
   a:hover {
     text-decoration: underline;
