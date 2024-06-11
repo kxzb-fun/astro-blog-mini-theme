@@ -1,0 +1,27 @@
+---
+const { ImgSrc, logoName="kxzb.fun" } = Astro.props
+---
+
+<div class="logo-bar">
+  <img class="logo-img" src={ImgSrc} alt="" />
+  <span class="logo-name">{logoName}</span>
+</div>
+
+<style>
+.logo-bar {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  .logo-img {
+    height: 48px;
+    width: 48px;
+    background: greenyellow;
+  }
+  .logo-name {
+    margin-left: 10px;
+    color: #1f1d1d;
+    font-size: 30px;
+  }
+</style>
