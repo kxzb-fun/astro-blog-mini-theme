@@ -1,0 +1,31 @@
+---
+const { pageTitle } = Astro.props;
+---
+
+<div class="page-title">
+  <h1>{pageTitle}</h1>
+</div>
+
+<style>
+  .page-title {
+    position: relative;
+    text-align: center;
+    margin: 80px;
+  }
+  h1 {
+    position: relative;
+    margin-bottom: 50px; /* 确保 h1 元素本身有 50px 的下边距 */
+  }
+  h1::after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 40%;
+    right: 40%;
+    top: 100%; /* 将 ::after 元素放置在 h1 元素的下方 */
+    margin-top: 50px; /* 添加 50px 的间距 */
+    border-bottom-color: rgb(29, 29, 31);
+    border-bottom-style: double;
+    border-bottom-width: 2px;
+  }
+</style>

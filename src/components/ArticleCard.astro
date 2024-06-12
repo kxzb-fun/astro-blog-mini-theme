@@ -1,0 +1,38 @@
+---
+const { title, time, des } = Astro.props
+---
+
+<a>
+    <article>
+        <h1>{title}</h1>
+        <div class="content">
+            <span>【{time}】</span>
+            {des}
+        </div>
+    </article>
+</a>
+
+<style>
+    a {
+        display: block;
+    }
+    article {
+        width: 100%;
+        padding: 30px 50px 16px;
+        /* background: #fff; */
+        /* background: #faf6ee; */
+        /* background: #CAF4FF; */
+        background: #ffffff75;
+        margin-bottom: 30px;
+        box-shadow: 0 0 0 0, 0 6px 12px rgba(36, 41, 47, .1);
+        border-radius: 4px;
+        color: #24292fcc;
+    }
+    h1 {
+        margin: 16px 0;
+    }
+    .content {
+        margin-bottom: 30px;
+        line-height: 1.7;
+    }
+</style>

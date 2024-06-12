@@ -1,12 +1,27 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "首页1";
-import Greeting from '../components/Greeting';
-
+import Greeting from "../components/Greeting";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Main from "../layouts/Main.astro";
+import ArticleCard from "../components/ArticleCard.astro";
+import PageTitle from "../components/PageTitle.astro";
 ---
-<BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
-  <!-- client:load 指令告诉 Astro 在页面加载时将其 JavaScript 发送并重新运行到客户端上，使组件可交互。这称为 被 Hydrate 的 组件。 -->
-  <Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there"]} />
 
+<BaseLayout pageTitle={pageTitle}>
+  <Header />
+  <PageTitle pageTitle="最近文章" />
+  <Main>
+    <!-- <h2>My awesome blog subtitle</h2> -->
+    <!-- client:load 指令告诉 Astro 在页面加载时将其 JavaScript 发送并重新运行到客户端上，使组件可交互。这称为 被 Hydrate 的 组件。 -->
+    <!-- <Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there"]} /> -->
+    <ArticleCard title="这是我的第一个篇文章" time="2024-06-11" des="这是我的第一个篇文章这是我的第一个篇文章这是我的第一个篇文章这是我的第一个这是我的第一个篇文章这是我的第一个篇文章这是我的第一个篇文章这是我的第一个篇文章篇文章"/>
+    <ArticleCard title="这是我的第一个篇文章" time="2024-06-11" des="这是我的第一个篇文章这是我的第一个篇文章这是我的第一个篇文章这是我的第一个这是我的第一个篇文章这是我的第一个篇文章这是我的第一个篇文章这是我的第一个篇文章篇文章"/>
+    <ArticleCard title="这是我的第一个篇文章" time="2024-06-11" des="这是我的第一个篇文章这是我的第一个篇文章这是我的第一个篇文章这是我的第一个这是我的第一个篇文章这是我的第一个篇文章这是我的第一个篇文章这是我的第一个篇文章篇文章"/>
+    <ArticleCard title="这是我的第一个篇文章" time="2024-06-11" des="这是我的第一个篇文章这是我的第一个篇文章这是我的第一个篇文章这是我的第一个这是我的第一个篇文章这是我的第一个篇文章这是我的第一个篇文章这是我的第一个篇文章篇文章"/>
+    <ArticleCard title="这是我的第一个篇文章" time="2024-06-11" des="这是我的第一个篇文章这是我的第一个篇文章这是我的第一个篇文章这是我的第一个这是我的第一个篇文章这是我的第一个篇文章这是我的第一个篇文章这是我的第一个篇文章篇文章"/>
+    <ArticleCard title="这是我的第一个篇文章" time="2024-06-11" des="这是我的第一个篇文章这是我的第一个篇文章这是我的第一个篇文章这是我的第一个这是我的第一个篇文章这是我的第一个篇文章这是我的第一个篇文章这是我的第一个篇文章篇文章"/>
+  </Main>
+  <Footer />
 </BaseLayout>
